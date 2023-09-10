@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog Creation Page</title>
+    <style>
+        /* Add your CSS styles for styling the page here */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+        }
+
+        #content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* Add more CSS for styling elements like forms, buttons, etc. */
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Create Your Blog</h1>
+    </header>
+    <div id="content">
+        <h2>Create a New Blog Post</h2>
+        <form id="blogForm">
+            <label for="title">Title:</label>
+            <input type="text" id="title" name="title" required><br><br>
+
+            <label for="content">Content:</label><br>
+            <textarea id="content" name="content" rows="5" required></textarea><br><br>
+
+            <label for="image">Image:</label>
+            <input type="file" id="image" name="image"><br><br>
+
+            <label for="video">Video:</label>
+            <input type="file" id="video" name="video"><br><br>
+
+            <button type="submit">Publish</button>
+        </form>
+    </div>
+
+    <script>
+        // Add your JavaScript code for handling form submissions, image and video uploads, etc.
+        const blogForm = document.getElementById('blogForm');
+        
+        blogForm.addEventListener('submit', function (e) {
+            e.preventDefault();
+
+            // Retrieve user inputs
+            const title = document.getElementById('title').value;
+            const content = document.getElementById('content').value;
+
+            // Handle image and video uploads as needed
+            // You can use FormData to handle file uploads
+
+            // Send data to the server for further processing (e.g., saving to a database)
+
+            // Display a success message or redirect to the published blog post
+        });
+    </script>
+</body>
+</html>
